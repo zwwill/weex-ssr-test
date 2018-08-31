@@ -1,0 +1,10 @@
+{
+  "extends": "eslint-config-kaola/esnext",
+  "parser": "babel-eslint",
+  "rules": {
+  },
+  "env": {
+    "mocha": true,
+    "es6": true
+  }
+}
