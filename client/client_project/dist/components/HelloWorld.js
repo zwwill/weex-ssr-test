@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -73,11 +73,11 @@ var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(8)
+__vue_styles__.push(__webpack_require__(1)
 )
 
 /* template */
-var __vue_template__ = __webpack_require__(1)
+var __vue_template__ = __webpack_require__(2)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -110,6 +110,16 @@ module.exports = __vue_exports__
 /* 1 */
 /***/ (function(module, exports) {
 
+module.exports = {
+  "message": {
+    "color": "#00B4FF"
+  }
+}
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('text', {
     staticClass: ["message"]
@@ -118,7 +128,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -132,21 +142,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _HelloWorld2.default.el = '#root';
 new Vue(_HelloWorld2.default);
-
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "message": {
-    "color": "#00B4FF"
-  }
-}
 
 /***/ })
 /******/ ]);
