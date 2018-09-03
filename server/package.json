@@ -1,12 +1,20 @@
 {
-  "name": "kaola-weex-ssr",
+  "name": "kapp-ssr",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "dependencies": {
-    "egg": "^2.0.0",
     "@kaola/kapp": "^1.1.3",
-    "@kaola/kapp-view-helpers": "^1.0.0"
+    "@kaola/kapp-view-helpers": "^1.0.0",
+    "@kaola/kapp-vue-ssr": "0.0.1-2",
+    "@kaola/mobileweb-scss": "0.0.1",
+    "egg": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "lint-staged": {
     "**/*.js": [
@@ -17,18 +25,20 @@
   "devDependencies": {
     "autod": "^3.0.1",
     "autod-egg": "^1.0.0",
+    "axios": "^0.17.1",
+    "babel-eslint": "^8.2.1",
     "cross-env": "^5.1.3",
-    "egg-scripts": "^2.1.0",
     "egg-bin": "^4.3.5",
     "egg-ci": "^1.8.0",
     "egg-mock": "^3.13.0",
-    "webstorm-disable-index": "^1.2.0",
+    "egg-scripts": "^2.1.0",
     "eslint": "^4.16.0",
     "eslint-config-kaola": "^0.1.3",
-    "babel-eslint": "^8.2.1",
     "husky": "^0.14.3",
+    "jsdom": "^12.0.0",
     "lint-staged": "^6.1.0",
-    "axios": "^0.17.1"
+    "webstorm-disable-index": "^1.2.0",
+    "weex-vue-render": "^1.0.30"
   },
   "engines": {
     "node": ">=8.9.0"
@@ -38,15 +48,16 @@
     "egg-scripts": "node ./node_modules/egg-scripts/bin/egg-scripts",
     "egg-bin": "node ./node_modules/egg-bin/bin/egg-bin",
     "cross-env": "node ./node_modules/cross-env/dist/bin/cross-env",
-    "start": "npm run egg-scripts -- start --title=kaola-weex-ssr",
-    "stop": "npm run egg-scripts -- stop --title=kaola-weex-ssr",
+    "start": "npm run egg-scripts -- start --title=kapp-ssr",
+    "stop": "npm run egg-scripts -- stop --title=kapp-ssr",
     "debug": "npm run egg-bin -- debug",
     "dev": "npm run egg-bin -- dev",
     "test": "npm run egg-bin -- test",
     "cov": "npm run egg-bin -- cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "clean": "rm -rf node_modules"
   },
   "ci": {
     "version": "8"

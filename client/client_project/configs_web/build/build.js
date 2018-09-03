@@ -10,7 +10,7 @@ const config = require('../config')
 const webpackServerConfig = require('./webpack.server.config')
 const webpackClinetConfig = require('./webpack.client.config')
 const isProduction = process.env.NODE_ENV === 'production';
-const buildRouter = require('./helper/build-router')
+// const buildRouter = require('./helper/build-router')
 
 const spinner = ora(isProduction?'build for production...':'local packing...')
 const wp = async (webpackConf, side)=>{
@@ -51,7 +51,7 @@ spinner.start()
 
 rm(path.join(config.build.assetsRoot), async err => {
     if (err) throw err
-    await buildRouter()
+    // await buildRouter()
     wp(webpackServerConfig,'server')
     wp(webpackClinetConfig,'client')
 })

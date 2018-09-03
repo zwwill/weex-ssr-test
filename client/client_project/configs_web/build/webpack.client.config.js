@@ -7,7 +7,7 @@ const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
 const WebpackParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
 
 let ccf = {
-    entry: './src/entry-client.js',
+    entry: '../src/entry-client.js',
     output: {
         path: config.build.assetsClientRoot,
         chunkFilename: '[name].js'

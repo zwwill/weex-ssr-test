@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper">
-    <image :src="logo" class="logo" />
+  <div class="wrapper" id="app">
+    <!--<image :src="logo" class="logo" />-->
     <text class="greeting">The environment is ready!</text>
     <HelloWorld/>
   </div>
@@ -17,7 +17,9 @@ export default {
     return {
       logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
     }
-  }
+  },
+    mounted(){
+    }
 }
 </script>
 

@@ -1,17 +1,22 @@
 'use strict';
+const fs = require('fs');
 
 const Controller = require('egg').Controller;
 
-class HomeController extends Controller {
-    async fail() {
-        await this.ctx.render('ERROR_404.html');
+class CommonController extends Controller {
+    async notFound() {
+        
+        this.ctx.body = this.readFile('app/view/404.html');
+    }
+    readFile(file) {
+        return fs.readFileSync(file, 'utf8');
     }
     async error() {
-        await this.ctx.render('ERROR_500.html');
+        this.ctx.body = this.readFile('app/view/error.html');
     }
     async proxy() {
         await this.ctx.proxyTo('target').response();
     }
 }
 
-module.exports = HomeController;
+module.exports = CommonController;

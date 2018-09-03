@@ -8,20 +8,20 @@ module.exports = function(appInfo) {
 
     const config = {};
 
-    if (!zkHosts) {
-        if (appInfo.region === 'hz') {
-            throw new Error('与后端约定 hz 机房 test env 下的的 zkHosts');
-        } else {
-            throw new Error('与后端约定 jd 机房 test env 下的的 zkHosts');
-        }
-    }
+    // if (!zkHosts) {
+    //     if (appInfo.region === 'hz') {
+    //         throw new Error('与后端约定 hz 机房 test env 下的的 zkHosts');
+    //     } else {
+    //         throw new Error('与后端约定 jd 机房 test env 下的的 zkHosts');
+    //     }
+    // }
 
-    config.webServerDiscovery = {
-        zkHosts,
-    };
+    // config.webServerDiscovery = {
+    //     zkHosts
+    // };
 
     config.notfound = {
-        pageUrl: '/fail.html'
+        pageUrl: '/404.html'
     };
 
     config.onerror = {

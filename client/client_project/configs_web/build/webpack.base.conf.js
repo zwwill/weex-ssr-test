@@ -48,11 +48,11 @@ module.exports = (conf)=> {
             // copy template layout file to server view folder
             new CopyWebpackPlugin([{
                 from: {
-                    glob: path.resolve(__dirname, '../src/template/**/*.html'),
+                    glob: path.resolve(__dirname, '../../src/template/**/*.html'),
                     dot: false,
                 },
-                to: path.resolve(__dirname, '../../server/app/view'),
-                context: path.resolve(__dirname, '../src/template'),
+                to: path.resolve(__dirname, '../../../../server/app/view'),
+                context: path.resolve(__dirname, '../../src/template'),
                 force: false,
             }])
         ]
