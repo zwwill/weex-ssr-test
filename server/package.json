@@ -9,12 +9,14 @@
     "@kaola/kapp-vue-ssr": "0.0.1-2",
     "@kaola/mobileweb-scss": "0.0.1",
     "egg": "^2.0.0",
+    "jsdom": "^11.12.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
+    "vuex-router-sync": "^5.0.0",
+    "weex-vue-render": "../../../weex/weex-vue-render"
   },
   "lint-staged": {
     "**/*.js": [
@@ -35,10 +37,8 @@
     "eslint": "^4.16.0",
     "eslint-config-kaola": "^0.1.3",
     "husky": "^0.14.3",
-    "jsdom": "^12.0.0",
     "lint-staged": "^6.1.0",
-    "webstorm-disable-index": "^1.2.0",
-    "weex-vue-render": "^1.0.30"
+    "webstorm-disable-index": "^1.2.0"
   },
   "engines": {
     "node": ">=8.9.0"

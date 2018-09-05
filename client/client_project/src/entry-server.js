@@ -1,9 +1,5 @@
-// const jsdom = require("jsdom");
-// global.window = new JSDOM(`<!DOCTYPE html>`).window;
-global.window = {e:123}
-console.log('global.window',global.window)
-console.log('window',window)
-
+// import weex from 'weex-vue-render';
+// import weex from '../../../../../weex/weex-vue-render';
 import { createApp } from './app'
 
 export default context => {

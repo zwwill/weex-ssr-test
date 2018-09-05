@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const config = require('./config');
 const helper = require('./helper');
 const glob = require('glob');
-const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
 const vueLoaderConfig = require('./vue-loader.conf');
 const vueWebTemp = helper.rootNode(config.templateDir);
 const hasPluginInstalled = fs.existsSync(helper.rootNode(config.pluginFilePath));

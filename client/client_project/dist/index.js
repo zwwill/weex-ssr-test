@@ -130,19 +130,15 @@ module.exports.render._withStripped = true
 /***/ }),
 /* 3 */,
 /* 4 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index_vue__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_index_vue__);
 
-
-var _index = __webpack_require__(5);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_index2.default.el = '#root';
-new Vue(_index2.default);
+__WEBPACK_IMPORTED_MODULE_0__src_index_vue___default.a.el = '#root';
+new Vue(__WEBPACK_IMPORTED_MODULE_0__src_index_vue___default.a);
 
 /***/ }),
 /* 5 */
@@ -213,44 +209,76 @@ module.exports = {
     "marginBottom": "30",
     "marginLeft": "30",
     "fontSize": "32"
+  },
+  "box": {
+    "width": "50",
+    "height": "50",
+    "backgroundColor": "#DDDDDD"
   }
 }
 
 /***/ }),
 /* 7 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
+var modal = void 0,
+    animation = void 0;
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    name: 'App',
+    components: {
+        HelloWorld: __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue___default.a
+    },
+    data: function data() {
+        return {
+            logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+        };
+    },
+    mounted: function mounted() {
+        modal = weex.requireModule('modal');
+        animation = weex.requireModule('animation');
+
+        modal.toast({
+            message: 'This is a toast',
+            duration: 2
+        });
+    },
+
+    methods: {
+        move: function move() {
+            var testEl = this.$refs.test;
+            animation.transition(testEl, {
+                styles: {
+                    backgroundColor: '#FF0000',
+                    transform: 'translate(0px, 100px) scale(2)',
+                    transformOrigin: 'center center'
+                },
+                duration: 800, //ms
+                timingFunction: 'ease',
+                delay: 0 //ms
+            }, function () {
+                modal.toast({ message: 'animation finished.' });
+            });
+        }
+    }
 });
-
-var _HelloWorld = __webpack_require__(0);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  name: 'App',
-  components: {
-    HelloWorld: _HelloWorld2.default
-  },
-  data: function data() {
-    return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
-    };
-  }
-}; //
-//
-//
-//
-//
-//
-//
-//
 
 /***/ }),
 /* 8 */
@@ -258,15 +286,19 @@ exports.default = {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["wrapper"]
-  }, [_c('image', {
-    staticClass: ["logo"],
+    staticClass: ["wrapper"],
     attrs: {
-      "src": _vm.logo
+      "id": "app"
     }
-  }), _c('text', {
+  }, [_c('text', {
     staticClass: ["greeting"]
-  }, [_vm._v("The environment is ready!")]), _c('HelloWorld')], 1)
+  }, [_vm._v("The environment is ready!")]), _c('HelloWorld'), _c('div', {
+    ref: "test",
+    staticClass: ["box"],
+    on: {
+      "click": _vm.move
+    }
+  }, [_c('text', [_vm._v("click")])])], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
