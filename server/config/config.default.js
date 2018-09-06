@@ -22,7 +22,7 @@ module.exports = function(appInfo) {
     };
 
     config.vuessr = {
-        cache: true,
+        cache: false,
         layout: path.join(appInfo.baseDir, 'app/view/layout.html'),
         renderOptions: {
             runInNewContext: false

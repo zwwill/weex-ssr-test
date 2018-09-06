@@ -114,19 +114,15 @@ module.exports.render._withStripped = true
 
 /***/ }),
 /* 2 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_components_HelloWorld_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_components_HelloWorld_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_components_HelloWorld_vue__);
 
-
-var _HelloWorld = __webpack_require__(0);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_HelloWorld2.default.el = '#root';
-new Vue(_HelloWorld2.default);
+__WEBPACK_IMPORTED_MODULE_0__src_components_HelloWorld_vue___default.a.el = '#root';
+new Vue(__WEBPACK_IMPORTED_MODULE_0__src_components_HelloWorld_vue___default.a);
 
 /***/ })
 /******/ ]);

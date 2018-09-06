@@ -115,19 +115,15 @@ module.exports.render._withStripped = true
 /***/ }),
 /* 2 */,
 /* 3 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index_vue__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__src_index_vue__);
 
-
-var _index = __webpack_require__(4);
-
-var _index2 = _interopRequireDefault(_index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_index2.default.el = '#root';
-new Vue(_index2.default);
+__WEBPACK_IMPORTED_MODULE_0__src_index_vue___default.a.el = '#root';
+new Vue(__WEBPACK_IMPORTED_MODULE_0__src_index_vue___default.a);
 
 /***/ }),
 /* 4 */
@@ -208,38 +204,32 @@ module.exports = {
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _HelloWorld = __webpack_require__(0);
-
-var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var modal = void 0,
-    animation = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+    animation = void 0;
 
-exports.default = {
+/* harmony default export */ __webpack_exports__["default"] = ({
     name: 'App',
     components: {
-        HelloWorld: _HelloWorld2.default
+        HelloWorld: __WEBPACK_IMPORTED_MODULE_0__components_HelloWorld_vue___default.a
     },
     data: function data() {
         return {
@@ -273,7 +263,7 @@ exports.default = {
             });
         }
     }
-};
+});
 
 /***/ }),
 /* 7 */
@@ -281,7 +271,7 @@ exports.default = {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["wrapper"],
+    staticClass: ["wrapper", "weex-root"],
     attrs: {
       "id": "app"
     }

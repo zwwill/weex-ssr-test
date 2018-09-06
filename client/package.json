@@ -34,7 +34,6 @@
     "vue": "^2.5.11"
   },
   "devDependencies": {
-    "cross-env": "^5.2.0",
     "autoprefixer": "^8.6.5",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.1",
@@ -46,6 +45,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "chai": "^4.1.2",
     "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.2.0",
     "css-loader": "^0.28.8",
     "eslint-friendly-formatter": "^4.0.1",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -82,7 +82,6 @@
     "webpack-uglify-parallel": "^0.1.4",
     "weex-loader": "^0.7.2",
     "weex-vue-precompiler": "^0.1.17",
-    "weex-vue-render": "^1.0.30",
-    "weex-vue-s-render": "^1.0.0"
+    "weex-vue-s-render": "^1.0.4"
   }
 }

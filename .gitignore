@@ -8,3 +8,5 @@ run/
 .DS_Store
 *.sw*
 *.un~
+server/app/view/
+server/app/public

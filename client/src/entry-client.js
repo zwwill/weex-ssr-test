@@ -1,6 +1,5 @@
-// import weex from 'weex-vue-render';
-// import weex from 'weex-vue-s-render';
-import weex from '../../../../weex/weex-vue-render';
+import weex from 'weex-vue-s-render';
+import 'weex-vue-s-render/dist/css/bundle.css';
 import { createApp } from './app'
 
 // 客户端特定引导逻辑……
