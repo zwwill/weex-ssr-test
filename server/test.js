@@ -1,16 +1,16 @@
-const jsdom = require('jsdom')
+const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 if(!global.window) {
-    const window = (new JSDOM(``, {
+    const window = (new JSDOM('', {
         pretendToBeVisual: true,
-        url: "http://localhost:8090"
+        url: 'http://localhost:8090'
     })).window;
     global.window = window;
-    for (var k in window) {
+    for (let k in window) {
         if (!global[k]) {
-            global[k] = window[k]
+            global[k] = window[k];
         }
     }
 }
 
-console.log('window',window)
+console.log('window', window);

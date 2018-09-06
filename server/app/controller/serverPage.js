@@ -3,15 +3,14 @@ const fs = require('fs');
 const path = require('path');
 
 if(!global.window) {
-    const jsdom = require('jsdom');
-    const { JSDOM } = jsdom;
-    const window = (new JSDOM(``, {
+    let JSDOM = require('jsdom').JSDOM;
+    let window = (new JSDOM('', {
         pretendToBeVisual: true,
-        url: "http://127.0.0.1"
+        url: 'https://127.0.0.1'
     })).window;
-    for (var k in window) {
+    for (let k in window) {
         if (!global[k]) {
-            global[k] = window[k]
+            global[k] = window[k];
         }
     }
     global.window = global;

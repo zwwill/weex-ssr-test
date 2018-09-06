@@ -1,4 +1,5 @@
 // import weex from 'weex-vue-render';
+// import weex from 'weex-vue-s-render';
 import weex from '../../../../weex/weex-vue-render';
 import { createApp } from './app'
 
