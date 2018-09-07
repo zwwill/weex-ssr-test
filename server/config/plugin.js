@@ -9,6 +9,6 @@ exports.webServerDiscovery = {
 
 exports.vuessr = {
     enable: true,
-    package: '../../../kappjs/vue-ssr'
-    // package: '@kaola/kapp-vue-ssr'
+    // package: '../../../kappjs/vue-ssr'
+    package: '@kaola/kapp-vue-ssr'
 };

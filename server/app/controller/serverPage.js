@@ -2,20 +2,6 @@
 const fs = require('fs');
 const path = require('path');
 
-if(!global.window) {
-    let JSDOM = require('jsdom').JSDOM;
-    let window = (new JSDOM('', {
-        pretendToBeVisual: true,
-        url: 'https://127.0.0.1'
-    })).window;
-    for (let k in window) {
-        if (!global[k]) {
-            global[k] = window[k];
-        }
-    }
-    global.window = global;
-}
-
 const getClientBubdleFile = pathStr => JSON.parse(fs.readFileSync(path.resolve(__dirname, '../public', pathStr), 'utf-8'));
 
 const Controller = require('egg').Controller;

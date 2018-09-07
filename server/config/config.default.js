@@ -22,6 +22,7 @@ module.exports = function(appInfo) {
     };
 
     config.vuessr = {
+        weex: true,
         cache: false,
         layout: path.join(appInfo.baseDir, 'app/view/layout.html'),
         renderOptions: {
