@@ -24,9 +24,15 @@ module.exports = (config)=> {
         ? utils.styleLoaders({
             sourceMap: config.build.productionSourceMap,
             extract: config.build.extract,
-            usePostCSS: false
+            usePostCSS: false,
+            minimize: true
         })
-        : utils.styleLoaders({sourceMap: config.dev.cssSourceMap, extract: config.dev.extract, usePostCSS: false})
+        : utils.styleLoaders({
+            sourceMap: config.dev.cssSourceMap,
+            extract: config.dev.extract,
+            usePostCSS: false,
+            minimize: false
+        })
 
     return {
         rules: [
