@@ -6,7 +6,7 @@
   "dependencies": {
     "@kaola/kapp": "^1.1.3",
     "@kaola/kapp-view-helpers": "^1.0.0",
-    "@kaola/kapp-vue-ssr": "0.0.1-3",
+    "@kaola/kapp-vue-ssr": "0.0.3",
     "@kaola/mobileweb-scss": "0.0.1",
     "egg": "^2.0.0",
     "jsdom": "^11.12.0",
